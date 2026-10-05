@@ -70,6 +70,7 @@ details summary::-webkit-details-marker {
 .chap {
     margin-top: 35px;
 }
+
 .pad {
     padding-bottom: 30px;
 }
@@ -174,6 +175,7 @@ details summary::-webkit-details-marker {
 
     }
 }
+
 .aranq {
     margin-top: 30px;
 }
@@ -570,5 +572,45 @@ details summary::-webkit-details-marker {
         width: 100%;
         height: auto;
         object-fit: unset;
+    }
+}
+
+.gallery-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-img.big {
+    height: 280px;
+}
+
+/* верхняя широкая */
+.gallery-img.small {
+    height: 200px;
+}
+
+/* две нижние */
+
+/* правая = 280 + 200 + gap(1rem) */
+.gallery-right {
+    height: calc(280px + 200px + 1rem);
+}
+
+@media (max-width: 767px) {
+    .gallery-right {
+        height: 300px;
+    }
+}
+
+/* Regenerative medicine photo: show the whole image on phones */
+@media (max-width: 767.98px) {
+    .regen-col {
+        min-height: 0 !important;
+    }
+    .regen-col img {
+        position: static !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
 }

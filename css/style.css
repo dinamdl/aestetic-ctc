@@ -559,19 +559,19 @@ details summary::-webkit-details-marker {
    без обрезки, а текст идёт сразу за ним, без наложения */
 @media (max-width: 991.98px) {
     .about-photo-col {
-        min-height: 0;
+        min-height: 0 !important;
     }
 
     .about-photo-col .position-relative.h-100 {
-        position: static;
-        height: auto;
+        position: static !important;
+        height: auto !important;
     }
 
     .about-photo {
-        position: static;
-        width: 100%;
-        height: auto;
-        object-fit: unset;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: unset !important;
     }
 }
 

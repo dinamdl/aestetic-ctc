@@ -614,3 +614,34 @@ details summary::-webkit-details-marker {
         object-fit: contain !important;
     }
 }
+
+/* Branded images (logo/text inside): no hover zoom */
+.category a:hover img.no-zoom,
+img.no-zoom:hover {
+    transform: none !important;
+}
+
+/* Desktop: hip image fills the full height of its column, level with the photos on the right */
+@media (min-width: 992px) {
+    .regen-col > a {
+        height: 100%;
+    }
+    .regen-col > a > img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* Osteoarthritis photo block: soft shadow + rounded corners */
+.ctc-gallery a img {
+    border-radius: 12px !important;
+}
+.ctc-gallery a {
+    border-radius: 12px !important;
+    box-shadow: 0 6px 18px rgba(27, 34, 42, .15);
+    transition: box-shadow .3s;
+}
+.ctc-gallery a:hover {
+    box-shadow: 0 10px 26px rgba(27, 34, 42, .22);
+}

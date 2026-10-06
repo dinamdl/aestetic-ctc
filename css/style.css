@@ -645,3 +645,56 @@ img.no-zoom:hover {
 .ctc-gallery a:hover {
     box-shadow: 0 10px 26px rgba(27, 34, 42, .22);
 }
+
+/* Gallery: right image fills the column height on desktop */
+@media (min-width: 992px) {
+    .fill-col > a {
+        height: 100%;
+    }
+    .fill-col > a > img {
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+}
+
+/* Gallery: equal square photos on the left, compact labels */
+.ct-gallery > div:first-child img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.ct-gallery .position-absolute.bottom-0 h5 {
+    font-size: 1rem;
+}
+.ct-gallery .position-absolute.bottom-0 small {
+    font-size: .75rem;
+}
+.ct-gallery .col-lg-6 .col-lg-6 .position-absolute.bottom-0 {
+    padding: .25rem .6rem !important;
+}
+.ct-gallery .col-lg-6 .col-lg-6 .position-absolute.bottom-0 h5 {
+    font-size: .8rem;
+}
+
+/* 2x2 grid of equal square photos */
+.ct-grid img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.ct-grid .position-absolute.bottom-0 {
+    padding: .25rem .6rem !important;
+}
+.ct-grid .position-absolute.bottom-0 h5 {
+    font-size: .9rem;
+}
+.ct-grid .position-absolute.bottom-0 small {
+    font-size: .75rem;
+}
+
+/* Top poster: shown whole (image itself ends with its text panel) */
+.poster-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
